@@ -10,22 +10,25 @@
 
 </head>
 <link rel="stylesheet" type="text/css" href="../css/first/first.css">
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
 <body>
 
-    <div class="sharethis-inline-share-buttons"></div>
-
-    <ul class="share-buttons" data-source="simplesharingbuttons.com">
-    </ul>
+    <div id="popWindow"></div>
     <!-- Optional content you want to persist between sections -->
     <div class="content">
 
         <a href="layout.html">
 
-            <button class="button button1">歡迎光臨</button>
+            <button class="button button1">
+                <div id="text"></div>
+            </button>
+
         </a>
+
     </div>
     <div id="box">
+
         <img src="../images/first/Holidays-icons-1.png" title="隨機廣告圖" id="ad-pic">
     </div>
     <section class="one">
@@ -52,11 +55,17 @@
     <div id="down-out">
         <div id="down">
             <div id="ad-box">
+
                 <img src="../images/first/Holidays-icons-1.png" alt="我是廣告">
+                <ul class="share-buttons" data-source="simplesharingbuttons.com">
+                </ul>
+                <div class="sharethis-inline-share-buttons"></div>
+                </img>
             </div>
         </div>
     </div>
 
+    <!-- <canvas id="canvas"></canvas> -->
 
     <script src="../js/first/first.js"></script>
 </body>

@@ -23,7 +23,7 @@ window.onload = function () {
 setTimeout(function () {
     //透過 black_DIV 的父層，就可以把自已移除掉
     div_adBox.parentNode.removeChild(div_adBox);
-}, 5000);
+}, 10000);
 //印字
 function Ptext(arr, id, time) {
     var arr = [];

@@ -1,0 +1,109 @@
+
+*{
+	margin:0;
+	padding:0;
+}
+body {
+	background-color: #F2F2F2;
+	margin-top:25px;
+}
+#BOX {
+	width: 850px;
+	margin: 0 auto;
+	padding: 25px;
+	background-color: #FFF;
+	box-shadow: 1px 5px 10px #999999;
+	margin-bottom:20px;
+	border-radius:0 0 15px 15px;
+}
+#BOX p {
+	font-size: 13px;
+	line-height: 1.6;
+	color:#555;
+}
+#BOX h1{
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:50px;
+	text-align:center;
+	color:#333;
+	padding-bottom:15px;
+}
+#NAV ul {
+	list-style-type: none;
+	padding: 0;
+	display: block;
+	width: 750px;
+	height: 40px;
+	background-image: url(../../images/index/images/menu_bg.gif);
+	margin: 0 auto;
+	padding-left: 150px;
+}
+#NAV li {
+	display: block;
+	width: 140px;
+	float: left;
+	position: relative;
+}
+#NAV li a {
+	display: block;
+	width: 140px;
+	height: 40px;
+	background-image: url(../../images/index/images/btn.gif);
+	text-align: center;
+	line-height: 40px;
+	font-size: 13px;
+	letter-spacing: 1px;
+	color: #333;
+	font-family: Arial, Geneva, sans-serif;
+	font-weight:bold;
+	text-decoration: none;
+}
+#NAV li a:hover {
+	color:#099;
+	background-position: left bottom;
+}
+
+#NAV ul ul {
+	position: absolute;
+	left: 0;
+	top: 40px;
+	width: 140px;
+	height: 180px;
+	background-image: url(../../images/index/images/box.jpg);
+	padding: 0;
+	padding-top: 20px;
+	display: none;
+}
+
+#NAV ul ul.open {
+	display: block;
+}
+
+#NAV li li {
+	display: block;
+	width: 140px;
+}
+#NAV li li a {
+	display: block;
+	width: 120px;
+	height: 30px;
+	background: none;
+	color: #333;
+	line-height: 30px;
+	font-family: Arial, Helvetica, sans-serif;
+	border-bottom: 1px dotted #CCC;
+	margin: 0 auto;
+}
+#NAV li li a:hover {
+	color: #F00;
+}
+h3{
+	color:#666;
+	font-size:15px;
+	font-family:"微軟正黑體";
+}
+h3 a {
+	color: #666;
+	text-decoration: none;
+	font-family: Verdana, Geneva, sans-serif;
+}

@@ -59,16 +59,30 @@
   </div>
   <div id="BOX">
     <h1>歡迎來到我的網站</h1>
+
+    <div class="weather">
+      <span id="time"></span>
+      <iframe name="weather_inc" src="http://i.tianqi.com/index.php?c=code&id=7" style="border:solid 1px #7ec8ea"
+        width="220" height="90" frameborder="0" marginwidth="0" marginheight="0" scrolling="no">
+      </iframe>
+
+      <body onload="startTime()">
+
+        <div id="clock"></div>
+    </div>
+
+
     <p>
       <iframe width="1000" height="800"
         src="https://embed.windy.com/embed2.html?lat=23.604&lon=121.152&detailLat=24.479&detailLon=121.532&width=650&height=450&zoom=8&level=surface&overlay=wind&product=ecmwf&menu=&message=&marker=&calendar=now&pressure=&type=map&location=coordinates&detail=&metricWind=default&metricTemp=default&radarRange=-1"
         frameborder="2"></iframe>
     </p>
+
+
   </div>
 
-
   <script type="text/javascript" src="../js/index/index.js"></script>
-
+  <script type="text/javascript" src="../js/index/WeatherScript.js"></script>
 </body>
 
 </html>

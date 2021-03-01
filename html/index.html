@@ -49,42 +49,35 @@
           <li><a href="#">JavaScript</a></li>
         </ul>
       </li>
-      <li id="menu5"><a href="#">WordPress</a>
-        <ul id="sub5">
-          <li><a href="#">WordPress</a></li>
-          <li><a href="#">WordPress</a></li>
-          <li><a href="#">WordPress</a></li>
-          <li><a href="#">WordPress</a></li>
-          <li><a href="#">WordPress</a></li>
-        </ul>
-      </li>
     </ul>
   </div>
   <div id="BOX">
     <h1>歡迎來到我的網站</h1>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6">
-          <div class="weather">
-            <div class="weatherNow"></div>
-            <div class="weatherWeek"></div>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <h3 id="CName"></h3>
-        </div>
-      </div>
-    </div>
+
     <p>
       <iframe width="1000" height="800"
         src="https://embed.windy.com/embed2.html?lat=23.604&lon=121.152&detailLat=24.479&detailLon=121.532&width=650&height=450&zoom=8&level=surface&overlay=wind&product=ecmwf&menu=&message=&marker=&calendar=now&pressure=&type=map&location=coordinates&detail=&metricWind=default&metricTemp=default&radarRange=-1"
-        frameborder="2"></iframe>
+        frameborder="0"></iframe>
     </p>
-  </div>
 
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="weather">
+          <div class="weatherNow"></div>
+          <div class="weatherWeek"></div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <h3 id="CName"></h3>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="../js/index/lib/jquery-3.1.1-min.js"></script>
   <script type="text/javascript" src="../js/index/index.js"></script>
-  <script type="text/javascript" src="js/index/cityData.js"></script>
-  <script type="text/javascript" src="js//index/WeatherScript.js"></script>
+  <script type="text/javascript" src="../js/index/cityData.js"></script>
+  <script type="text/javascript" src="../js//index/WeatherScript.js"></script>
 </body>
 
 </html>

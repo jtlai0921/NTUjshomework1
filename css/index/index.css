@@ -1,32 +1,32 @@
-
-*{
-	margin:0;
-	padding:0;
+* {
+	margin: 0;
+	padding: 0;
 }
 body {
-	background-color: #F2F2F2;
-	margin-top:25px;
+	background-color: #f2f2f2;
+	margin-top: 25px;
+	justify-content: space-between;
 }
 #BOX {
 	width: 1200px;
 	margin: 0 auto;
 	padding: 25px;
-	background-color: #FFF;
+	background-color: #fff;
 	box-shadow: 1px 5px 10px #999999;
-	margin-bottom:20px;
-	border-radius:0 0 15px 15px;
+	margin-bottom: 20px;
+	border-radius: 0 0 15px 15px;
 }
 #BOX p {
 	font-size: 13px;
 	line-height: 1.6;
-	color:#555;
+	color: #555;
 }
-#BOX h1{
-	font-family:Verdana, Geneva, sans-serif;
-	font-size:50px;
-	text-align:center;
-	color:#333;
-	padding-bottom:15px;
+#BOX h1 {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 50px;
+	text-align: center;
+	color: #333;
+	padding-bottom: 15px;
 }
 #NAV ul {
 	list-style-type: none;
@@ -55,11 +55,11 @@ body {
 	letter-spacing: 1px;
 	color: #333;
 	font-family: Arial, Geneva, sans-serif;
-	font-weight:bold;
+	font-weight: bold;
 	text-decoration: none;
 }
 #NAV li a:hover {
-	color:#099;
+	color: #099;
 	background-position: left bottom;
 }
 
@@ -91,16 +91,16 @@ body {
 	color: #333;
 	line-height: 30px;
 	font-family: Arial, Helvetica, sans-serif;
-	border-bottom: 1px dotted #CCC;
+	border-bottom: 1px dotted #ccc;
 	margin: 0 auto;
 }
 #NAV li li a:hover {
-	color: #F00;
+	color: #f00;
 }
-h3{
-	color:#666;
-	font-size:15px;
-	font-family:"微軟正黑體";
+h3 {
+	color: #666;
+	font-size: 15px;
+	font-family: "微軟正黑體";
 }
 h3 a {
 	color: #666;

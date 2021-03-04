@@ -1,311 +1,313 @@
 .wrapper:before,
 .content {
-    box-sizing: border-box;
-    display: block;
-    font-size: 4em;
-    padding: 1em;
-    width: 6em;
-    height: 6em;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate3d(-50%, -50%, 0);
+  box-sizing: border-box;
+  display: block;
+  font-size: 4em;
+  padding: 1em;
+  width: 6em;
+  height: 6em;
+  position: fixed;
+  top: 50%;
+  left: 70%;
+  transform: translate3d(-50%, -50%, 0);
 }
 
 .content {
-    font-weight: bold;
-    text-align: center;
-    z-index: 1000;
-    background: #fff;
-    color: #000;
-    mix-blend-mode: lighten;
+  font-weight: bold;
+  text-align: center;
+  z-index: 1000;
+  background: #fff;
+  color: #000;
+  mix-blend-mode: lighten;
 }
-#popWindow{ /*此行指定放置廣告的div */
-    width:666px; /*此行設定div的寬度*/
-    height:488px; /*此行設定div的高度*/
-    background:url(popWindow.png) no-repeat; /*此行設定div的背景圖形*/
-    box-shadow:5px 5px 10px black; /*此行設定div的外框陰影*/
-    border:2px gray solid; /*此行設定div的外框線條*/
-    border-radius:20px; /*此行設定div的外框圓角*/
-    position:fixed; /*此行設定div為不隨捲動而移動的模式*/
-    }
+#popWindow {
+  /*此行指定放置廣告的div */
+  width: 666px; /*此行設定div的寬度*/
+  height: 488px; /*此行設定div的高度*/
+  background: url(popWindow.png) no-repeat; /*此行設定div的背景圖形*/
+  box-shadow: 5px 5px 10px black; /*此行設定div的外框陰影*/
+  border: 2px gray solid; /*此行設定div的外框線條*/
+  border-radius: 20px; /*此行設定div的外框圓角*/
+  position: fixed; /*此行設定div為不隨捲動而移動的模式*/
+}
 #box {
-    width: 580px;
-    height: 580px;
-    margin: 30px auto;
-    background-color: #fff;
-    border-radius: 50%;
-    position: relative;
-    border: 40px solid #F60;
-    position: fixed;
-    display: block;
-   
-    z-index: 1000;
+  width: 580px;
+  height: 580px;
+  margin: 30px auto;
+  background-color: #fff;
+  border-radius: 50%;
+  position: relative;
+  border: 40px solid #f60;
+  position: fixed;
+  display: block;
+
+  z-index: 1000;
 }
 
 #box img {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
 }
 
 section {
-    background-repeat: no-repeat;
-    background-size: cover;
-    isolation: isolate;
-    position: relative;
-    height: 100vh;
-    padding: 1em;
+  background-repeat: no-repeat;
+  background-size: cover;
+  isolation: isolate;
+  position: relative;
+  height: 100vh;
+  padding: 1em;
 }
 
 .wrapper {
-    clip: rect(auto auto auto auto);
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+  clip: rect(auto auto auto auto);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 
 .wrapper:before {
-    content: " ";
-    padding: 4em 4em;
-    mix-blend-mode: darken;
+  content: " ";
+  padding: 4em 4em;
+  mix-blend-mode: darken;
 }
 
 .one {
-    background-image: url(https://source.unsplash.com/1920x1080?nature);
+  background-image: url(https://source.unsplash.com/1920x1080?nature);
 }
 
 .one .wrapper:before {
-    background: red;
+  background: red;
 }
 
 .two {
-    background-image: url(https://source.unsplash.com/1920x1080?landscape);
+  background-image: url(https://source.unsplash.com/1920x1080?landscape);
 }
 
 .two .wrapper:before {
-    background: #faaa54;
-    mix-blend-mode: difference;
+  background: #faaa54;
+  mix-blend-mode: difference;
 }
 
 .three {
-    background-image: url(https://source.unsplash.com/1920x1080?portrait);
+  background-image: url(https://source.unsplash.com/1920x1080?portrait);
 }
 
 .three .wrapper:before {
-    background: #6c320a;
-    mix-blend-mode: screen;
+  background: #6c320a;
+  mix-blend-mode: screen;
 }
 
 .four {
-    background-image: url(https://source.unsplash.com/1920x1080?stars);
+  background-image: url(https://source.unsplash.com/1920x1080?stars);
 }
 
 .four .wrapper:before {
-    background: #e4135d;
+  background: #e4135d;
 }
 
 .button {
-    border: none;
-    color: white;
-    padding: 16px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 32px;
-    margin: 4px 2px;
-    transition-duration: 0.4s;
-    cursor: pointer;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 32px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
 }
 
 .button1 {
-    background-color: white;
-    color: black;
-    border: 2px solid #4CAF50;
+  background-color: white;
+  color: black;
+  border: 2px solid #4caf50;
 }
 
 .button1:hover {
-    background-color: #4CAF50;
-    color: white;
+  background-color: #4caf50;
+  color: white;
 }
-.share-buttons{
-   
-    
+.share-buttons {
 }
 
 /*# sourceMappingURL=background.css.map */
 
 #gradient {
-    width: 100%;
-    height: 800px;
-    padding: 0px;
-    margin: 0px;
+  width: 100%;
+  height: 800px;
+  padding: 0px;
+  margin: 0px;
 }
 /*廣告*/
 #down #ad-box {
-    position: fixed;
-    /*絕對座標*/
-    /*會產生 Z 軸，獨立在所有的網頁內容之上*/
-    left: 0;
-    top: 0;
-    z-index: 2000;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
-    display: none; /*一開始先把廣告隱藏*/
+  position: fixed;
+  /*絕對座標*/
+  /*會產生 Z 軸，獨立在所有的網頁內容之上*/
+  left: 0;
+  top: 0;
+  z-index: 2000;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: none; /*一開始先把廣告隱藏*/
 }
 
 #down #ad-box img {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
 }
 #canvas {
-    width: 100%;
-    height: 100%;
-  }
-  .resp-sharing-button__link,
+  width: 100%;
+  height: 100%;
+}
+.resp-sharing-button__link,
 .resp-sharing-button__icon {
-  display: inline-block
+  display: inline-block;
 }
 
 .resp-sharing-button__link {
   text-decoration: none;
   color: #fff;
-  margin: 0.5em
+  margin: 0.5em;
 }
 
 .resp-sharing-button {
   border-radius: 5px;
   transition: 25ms ease-out;
   padding: 0.5em 0.75em;
-  font-family: Helvetica Neue,Helvetica,Arial,sans-serif
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
 }
 
 .resp-sharing-button__icon svg {
   width: 1em;
   height: 1em;
   margin-right: 0.4em;
-  vertical-align: top
+  vertical-align: top;
 }
 
 .resp-sharing-button--small svg {
   margin: 0;
-  vertical-align: middle
+  vertical-align: middle;
 }
 
 /* Non solid icons get a stroke */
 .resp-sharing-button__icon {
   stroke: #fff;
-  fill: none
+  fill: none;
 }
 
 /* Solid icons get a fill */
 .resp-sharing-button__icon--solid,
 .resp-sharing-button__icon--solidcircle {
   fill: #fff;
-  stroke: none
+  stroke: none;
 }
 
 .resp-sharing-button--twitter {
-  background-color: #55acee
+  background-color: #55acee;
 }
 
 .resp-sharing-button--twitter:hover {
-  background-color: #2795e9
+  background-color: #2795e9;
 }
 
 .resp-sharing-button--pinterest {
-  background-color: #bd081c
+  background-color: #bd081c;
 }
 
 .resp-sharing-button--pinterest:hover {
-  background-color: #8c0615
+  background-color: #8c0615;
 }
 
 .resp-sharing-button--facebook {
-  background-color: #3b5998
+  background-color: #3b5998;
 }
 
 .resp-sharing-button--facebook:hover {
-  background-color: #2d4373
+  background-color: #2d4373;
 }
 
 .resp-sharing-button--tumblr {
-  background-color: #35465C
+  background-color: #35465c;
 }
 
 .resp-sharing-button--tumblr:hover {
-  background-color: #222d3c
+  background-color: #222d3c;
 }
 
 .resp-sharing-button--reddit {
-  background-color: #5f99cf
+  background-color: #5f99cf;
 }
 
 .resp-sharing-button--reddit:hover {
-  background-color: #3a80c1
+  background-color: #3a80c1;
 }
 
 .resp-sharing-button--google {
-  background-color: #dd4b39
+  background-color: #dd4b39;
 }
 
 .resp-sharing-button--google:hover {
-  background-color: #c23321
+  background-color: #c23321;
 }
 
 .resp-sharing-button--linkedin {
-  background-color: #0077b5
+  background-color: #0077b5;
 }
 
 .resp-sharing-button--linkedin:hover {
-  background-color: #046293
+  background-color: #046293;
 }
 
 .resp-sharing-button--email {
-  background-color: #777
+  background-color: #777;
 }
 
 .resp-sharing-button--email:hover {
-  background-color: #5e5e5e
+  background-color: #5e5e5e;
 }
 
 .resp-sharing-button--xing {
-  background-color: #1a7576
+  background-color: #1a7576;
 }
 
 .resp-sharing-button--xing:hover {
-  background-color: #114c4c
+  background-color: #114c4c;
 }
 
 .resp-sharing-button--whatsapp {
-  background-color: #25D366
+  background-color: #25d366;
 }
 
 .resp-sharing-button--whatsapp:hover {
-  background-color: #1da851
+  background-color: #1da851;
 }
 
 .resp-sharing-button--hackernews {
-background-color: #FF6600
+  background-color: #ff6600;
 }
-.resp-sharing-button--hackernews:hover, .resp-sharing-button--hackernews:focus {   background-color: #FB6200 }
+.resp-sharing-button--hackernews:hover,
+.resp-sharing-button--hackernews:focus {
+  background-color: #fb6200;
+}
 
 .resp-sharing-button--vk {
-  background-color: #507299
+  background-color: #507299;
 }
 
 .resp-sharing-button--vk:hover {
-  background-color: #43648c
+  background-color: #43648c;
 }
 
 .resp-sharing-button--facebook {
@@ -331,8 +333,8 @@ background-color: #FF6600
 }
 
 .resp-sharing-button--tumblr {
-  background-color: #35465C;
-  border-color: #35465C;
+  background-color: #35465c;
+  border-color: #35465c;
 }
 
 .resp-sharing-button--tumblr:hover,
@@ -390,32 +392,30 @@ background-color: #FF6600
   border-color: #1a7576;
 }
 
-.resp-sharing-button--xing:hover
-.resp-sharing-button--xing:active {
-  background-color: #114C4C;
-  border-color: #114C4C;
+.resp-sharing-button--xing:hover .resp-sharing-button--xing:active {
+  background-color: #114c4c;
+  border-color: #114c4c;
 }
 
 .resp-sharing-button--whatsapp {
-  background-color: #25D366;
-  border-color: #25D366;
+  background-color: #25d366;
+  border-color: #25d366;
 }
 
 .resp-sharing-button--whatsapp:hover,
 .resp-sharing-button--whatsapp:active {
-  background-color: #1DA851;
-  border-color: #1DA851;
+  background-color: #1da851;
+  border-color: #1da851;
 }
 
 .resp-sharing-button--hackernews {
-  background-color: #FF6600;
-  border-color: #FF6600;
+  background-color: #ff6600;
+  border-color: #ff6600;
 }
 
-.resp-sharing-button--hackernews:hover
-.resp-sharing-button--hackernews:active {
-  background-color: #FB6200;
-  border-color: #FB6200;
+.resp-sharing-button--hackernews:hover .resp-sharing-button--hackernews:active {
+  background-color: #fb6200;
+  border-color: #fb6200;
 }
 
 .resp-sharing-button--vk {
@@ -423,15 +423,15 @@ background-color: #FF6600
   border-color: #507299;
 }
 
-.resp-sharing-button--vk:hover
-.resp-sharing-button--vk:active {
+.resp-sharing-button--vk:hover .resp-sharing-button--vk:active {
   background-color: #43648c;
   border-color: #43648c;
 }
 
 .resp-sharing-button--telegram {
-  background-color: #54A9EB;
+  background-color: #54a9eb;
 }
 
 .resp-sharing-button--telegram:hover {
-  background-color: #4B97D1;}
+  background-color: #4b97d1;
+}

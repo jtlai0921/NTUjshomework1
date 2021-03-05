@@ -10,9 +10,9 @@ var paddleWidth = 75;
 var paddleX = (canvas.width - paddleWidth) / 2;
 var rightPressed = false;
 var leftPressed = false;
-var brickRowCount = 5;
+var brickRowCount = 8;
 var brickColumnCount = 3;
-var brickWidth = 75;
+var brickWidth = 100;
 var brickHeight = 20;
 var brickPadding = 10;
 var brickOffsetTop = 30;
@@ -83,10 +83,11 @@ function drawBall() {
 function drawPaddle() {
     ctx.beginPath();
     ctx.rect(paddleX, canvas.height - paddleHeight, paddleWidth, paddleHeight);
-    ctx.fillStyle = "#5F7573";
+    ctx.fillStyle = "#F7573";
     ctx.fill();
     ctx.closePath();
 }
+//磚塊數
 function drawBricks() {
     for (var c = 0; c < brickColumnCount; c++) {
         for (var r = 0; r < brickRowCount; r++) {
@@ -97,7 +98,7 @@ function drawBricks() {
                 bricks[c][r].y = brickY;
                 ctx.beginPath();
                 ctx.rect(brickX, brickY, brickWidth, brickHeight);
-                ctx.fillStyle = "#6B1B7A";
+                ctx.fillStyle = "#1B1B7A";
                 ctx.fill();
                 ctx.closePath();
             }

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <!-- keep the line below for OpenProcessing compatibility -->
+    <script src="https://openprocessing.org/openprocessing_sketch.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/addons/p5.sound.min.js"></script>
+    <script src="p5_3.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+
+<body>
+    <script>
+        function setup() {
+            createCanvas(240, 120); // 建立畫布 createCanvas( 【寬度】, 【高度】 )
+        }
+
+        function draw() {
+            if (mouseIsPressed) { // 按住滑鼠左/右鍵時
+                fill("blue"); // 填滿顏色
+                strokeWeight(0); // 外框寬度
+                ellipse(mouseX, mouseY, 10, 10); // 繪製圓圈 ellipse( 【x軸】, 【y軸】, 【寬度】, 【高度】 )
+            }
+        }
+    </script>
+</body>
+
+</html>

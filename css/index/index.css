@@ -40,13 +40,13 @@ body {
 }
 #NAV li {
 	display: block;
-	width: 140px;
+	width: 160px;
 	float: left;
 	position: relative;
 }
 #NAV li a {
 	display: block;
-	width: 140px;
+	width: 160px;
 	height: 40px;
 	background-image: url(../../images/index/images/btn.gif);
 	text-align: center;

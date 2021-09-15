@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>opendata</title>
+    <link href="../../css/opendata/opendata2.css" rel="stylesheet" type="text/css">
+
+</head>
+
+
+<body>
+    <h1>Open Data .epa</h1>
+    <h2>行政院環境保護署。環境資源資料開放平臺</h2>
+    <p>API Key 有效期限到 2022-09-05</p>
+
+    <p>
+        <button onclick="change(1);">[大氣] 空氣品質 AQI (每小時提供)</button>
+        <button onclick="change(2);">[大氣] PM10小時值(每小時提供)</button>
+        <button onclick="change(3);">[水] 日累積雨量 (每月更新)</button>
+        <button onclick="change(4);">[水] 河川水質監測資料</button>
+        <button onclick="change(5);">全國細懸浮微粒手動監測資料</button>
+    </p>
+
+    <div id="source"><input type="text" id="source_json" value="" style="width:100%;"></div>
+
+    <p>
+        <button id="btn">讀取資料 .ajax</button>
+    </p>
+
+
+    <div id="showarea"></div>
+    <div id="showdata"></div>
+    </ul>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../../js/opendata/opendata2.js"></script>
+</body>
+
+</html>

@@ -1,17 +1,7 @@
-/**
-* Slot machine
-* Author: Saurabh Odhyan | http://odhyan.com
-*
-* Licensed under the Creative Commons Attribution-ShareAlike License, Version 3.0 (the "License")
-* You may obtain a copy of the License at
-* http://creativecommons.org/licenses/by-sa/3.0/
-*
-* Date: May 23, 2011 
-*/
 $(document).ready(function() {
     /**
-    * Global variables
-    */
+     * Global variables
+     */
     var completed = 0,
         imgHeight = 1374,
         posArr = [
@@ -34,7 +24,7 @@ $(document).ready(function() {
             1230, //banana
             1298 //cherry
         ];
-    
+
     var win = [];
     win[0] = win[454] = win[913] = 1;
     win[80] = win[539] = win[1000] = 2;
@@ -44,9 +34,9 @@ $(document).ready(function() {
     win[378] = win[837] = win[1298] = 6;
 
     /**
-    * @class Slot
-    * @constructor
-    */
+     * @class Slot
+     * @constructor
+     */
     function Slot(el, max, step) {
         this.speed = 0; //speed of the slot at any point of time
         this.step = step; //speed will increase at this rate
@@ -56,22 +46,22 @@ $(document).ready(function() {
         this.pos = null; //final position of the slot    
 
         $(el).pan({
-            fps:30,
-            dir:'down'
+            fps: 30,
+            dir: 'down'
         });
         $(el).spStop();
     }
 
     /**
-    * @method start
-    * Starts a slot
-    */
+     * @method start
+     * Starts a slot
+     */
     Slot.prototype.start = function() {
         var _this = this;
         $(_this.el).addClass('motion');
         $(_this.el).spStart();
         _this.si = window.setInterval(function() {
-            if(_this.speed < _this.maxSpeed) {
+            if (_this.speed < _this.maxSpeed) {
                 _this.speed += _this.step;
                 $(_this.el).spSpeed(_this.speed);
             }
@@ -79,19 +69,19 @@ $(document).ready(function() {
     };
 
     /**
-    * @method stop
-    * Stops a slot
-    */
+     * @method stop
+     * Stops a slot
+     */
     Slot.prototype.stop = function() {
         var _this = this,
             limit = 30;
         clearInterval(_this.si);
         _this.si = window.setInterval(function() {
-            if(_this.speed > limit) {
+            if (_this.speed > limit) {
                 _this.speed -= _this.step;
                 $(_this.el).spSpeed(_this.speed);
             }
-            if(_this.speed <= limit) {
+            if (_this.speed <= limit) {
                 _this.finalPos(_this.el);
                 $(_this.el).spSpeed(0);
                 $(_this.el).spStop();
@@ -103,9 +93,9 @@ $(document).ready(function() {
     };
 
     /**
-    * @method finalPos
-    * Finds the final position of the slot
-    */
+     * @method finalPos
+     * Finds the final position of the slot
+     */
     Slot.prototype.finalPos = function() {
         var el = this.el,
             el_id,
@@ -123,11 +113,11 @@ $(document).ready(function() {
         pos = pos.split(' ')[1];
         pos = parseInt(pos, 10);
 
-        for(i = 0; i < posArr.length; i++) {
-            for(j = 0;;j++) {
+        for (i = 0; i < posArr.length; i++) {
+            for (j = 0;; j++) {
                 k = posArr[i] + (imgHeight * j);
-                if(k > pos) {
-                    if((k - pos) < posMin) {
+                if (k > pos) {
+                    if ((k - pos) < posMin) {
                         posMin = k - pos;
                         best = k;
                         this.pos = posArr[i]; //update the final position of the slot
@@ -140,19 +130,19 @@ $(document).ready(function() {
         best += imgHeight + 4;
         bgPos = "0 " + best + "px";
         $(el).animate({
-            backgroundPosition:"(" + bgPos + ")"
+            backgroundPosition: "(" + bgPos + ")"
         }, {
             duration: 200,
             complete: function() {
-                completed ++;
+                completed++;
             }
         });
     };
-    
+
     /**
-    * @method reset
-    * Reset a slot to initial state
-    */
+     * @method reset
+     * Reset a slot to initial state
+     */
     Slot.prototype.reset = function() {
         var el_id = $(this.el).attr('id');
         $._spritely.instances[el_id].t = 0;
@@ -172,7 +162,7 @@ $(document).ready(function() {
 
     function printResult() {
         var res;
-        if(win[a.pos] === win[b.pos] && win[a.pos] === win[c.pos]) {
+        if (win[a.pos] === win[b.pos] && win[a.pos] === win[c.pos]) {
             res = "You Win!";
         } else {
             res = "You Lose";
@@ -186,38 +176,38 @@ $(document).ready(function() {
         c = new Slot('#slot3', 70, 3);
 
     /**
-    * Slot machine controller
-    */
+     * Slot machine controller
+     */
     $('#control').click(function() {
         var x;
-        if(this.innerHTML == "Start") {
+        if (this.innerHTML == "Start") {
             a.start();
             b.start();
             c.start();
             this.innerHTML = "Stop";
-            
+
             disableControl(); //disable control until the slots reach max speed
-            
+
             //check every 100ms if slots have reached max speed 
             //if so, enable the control
             x = window.setInterval(function() {
-                if(a.speed >= a.maxSpeed && b.speed >= b.maxSpeed && c.speed >= c.maxSpeed) {
+                if (a.speed >= a.maxSpeed && b.speed >= b.maxSpeed && c.speed >= c.maxSpeed) {
                     enableControl();
                     window.clearInterval(x);
                 }
             }, 100);
-        } else if(this.innerHTML == "Stop") {
+        } else if (this.innerHTML == "Stop") {
             a.stop();
             b.stop();
             c.stop();
             this.innerHTML = "Reset";
 
             disableControl(); //disable control until the slots stop
-            
+
             //check every 100ms if slots have stopped
             //if so, enable the control
             x = window.setInterval(function() {
-                if(a.speed === 0 && b.speed === 0 && c.speed === 0 && completed === 3) {
+                if (a.speed === 0 && b.speed === 0 && c.speed === 0 && completed === 3) {
                     enableControl();
                     window.clearInterval(x);
                     printResult();
